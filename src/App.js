@@ -30,6 +30,8 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="container p-5">
+          <input class="form-control my-3" type="text" placeholder="Enter keywords" />
+
           {rocketData.map((rocket) => (
             <Suspense fallback={<div>loading</div>}>
               <RocketComponent
@@ -41,6 +43,8 @@ function App() {
               />
             </Suspense>
           ))}
+
+          <h3 className="text-center">NO MORE INFOS</h3>
         </div>
       </div>
     </div>
