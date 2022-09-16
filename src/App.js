@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="container p-5">
+        <div className="container p-5 list">
           <input class="form-control my-3" type="text" placeholder="Enter keywords" />
 
           {rocketData.map((rocket) => (
@@ -38,7 +38,7 @@ function App() {
                 key={rocket.id}
                 flightNumber={rocket["flight_number"]}
                 flightName={rocket["name"]}
-                launchYear={rocket["date_local"].slice(0, 10)}
+                launchYear={rocket["date_local"].slice(0, 4)}
                 details={rocket["details"] ? rocket["details"] : "No Value"}
               />
             </Suspense>
